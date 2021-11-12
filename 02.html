@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var player=new Object();//建新空白物件
+        player.name='john';//屬性
+        player.hp=100;//屬性
+        player.fight=function(){//方法
+            this.hp-=2;//this代表這個物件
+        }
+        player.rest=function(){
+            this.hp++;
+        }
+        player.report=function(){
+            alert(this.name+": "+this.hp);
+        }
+        alert(player.name)
+        player.fight()
+        player.rest()
+        player.report()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
