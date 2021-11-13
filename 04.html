@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件處理</title>
+    <script>
+        function init(){
+            // 取得id為btn的Element
+            var btn = document.getElementById("btn");
+            /* btn.onclick => 註冊為onclick事件
+            btn.onclick=function(){
+                alert("clicked");
+            }*/
+
+            var handler = function(){//對應事件的函式
+                alert("clicked")
+            };
+            btn.addEventListener("click" /*事件的名稱*/ ,handler);
+        }
+    </script>
+
+   
+</head>
+<!-- onload為onload事件，onload="init()" => 網頁一載入就執行init()方法 -->
+<body onload="init()">  
+    <button id="btn">click</button>
+    <!-- <button onclick="">click</button> -->
+    <!-- <button onmouseover="">click</button>
+    <button onmouseout="">click</button> -->
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+    <script>
+        // function rolldice(){
+        //     var temp=Math.random() * 6;
+        //     var n = Math.ceil(temp);
+        //     return n;
+        // }
+        // var n0,n1,n2;
+        // n0 = rolldice();
+        // n1 = rolldice();
+        // n2 = rolldice();
+
+        function rolldice(maxValue){
+            var temp=Math.random() * maxValue;
+            var n = Math.ceil(temp);
+            return n;
+        }
+        var n0,n1,n2;
+        n0 = rolldice(6);
+        n1 = rolldice(7);
+        n2 = rolldice(8);
+        console.log(n0);
+        console.log(n1);
+        console.log(n2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

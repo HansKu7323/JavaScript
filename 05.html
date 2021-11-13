@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件物件</title>
+    <script>
+        a=[1,2,3,4,5,6];
+        //取得長度=>陣列名字.length
+        console.log(a.length);//6
+
+        //從尾巴新增項目push
+        a.push(7)//[1, 2, 3, 4, 5, 6, 7]
+        console.log(a);
+
+        //從尾巴抽取項目pop
+        a.pop();
+        console.log(a);//[1, 2, 3, 4, 5, 6,]
+
+        //從頭新增項目unshift
+        a.unshift(8);
+        console.log(a);//[8, 1, 2, 3, 4, 5, 6]
+
+        //從頭抽取項目shift
+        a.shift();
+        console.log(a);//[1, 2, 3, 4, 5, 6,]
+
+        //接合splice
+        a.splice(1,1,13,11);
+        console.log(a)//[1, 13, 11, 3, 4, 5, 6]
+        a.splice(1,0,14,15);
+        console.log(a);//[1, 14, 15, 13, 11, 3, 4, 5, 6]
+
+        //尋找index => indexof
+        //找的到回傳值的index，找不到回傳-1
+        var x=a.indexOf(13);
+        console.log(x);
+
+        //
+        // l=a.length;
+        // for(i=0; i<l; i++){
+        //     console.log(a[i]);
+        // }
+
+        //foreach
+        // a.forEach(function(v){
+        //     console.log(v);
+        // });
+
+        a.forEach(function(v,i,arr){
+            // console.log(v);
+            // console.log(i);
+            console.log(arr);
+        });
+
+        // a.forEach(e => console.log(e));
+
+
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>
