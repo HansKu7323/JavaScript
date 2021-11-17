@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // callback
+        function shout(){
+            console.log("hello JavaScript");
+        }
+
+        function countToSeven(cb){
+            for(var i=1; i<=7; i++){
+                console.log(i);
+            }
+            if (typeof cb === 'function'){
+                cb();
+            }
+        }
+
+        countToSeven(shout);
+        // shout();
+
+        //每隔幾秒做一次(會重覆做)
+        // setInterval(shout, 2*1000)
+
+        //隔顧秒後做(只會做一次)
+        setTimeout(shout, 1000)
+
+        
+
+
+    </script>
+</body>
+</html>
